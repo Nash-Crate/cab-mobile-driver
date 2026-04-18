@@ -1,0 +1,26 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mobile_driver/core/entities/entities.dart';
+
+part 'user_model.freezed.dart';
+part 'user_model.g.dart';
+
+/// User model
+@freezed
+class UserModel with _$UserModel {
+  // ignore: public_member_api_docs
+  const factory UserModel({
+    required String id,
+  }) = _UserModel;
+
+  const UserModel._();
+
+  /// Create user model from json
+  factory UserModel.fromJson(Map<String, dynamic> json) => _$UserModelFromJson(json);
+
+  /// Convert [UserModel] to [User] entity
+  User toDomain() {
+    return User(
+      id: id,
+    );
+  }
+}
