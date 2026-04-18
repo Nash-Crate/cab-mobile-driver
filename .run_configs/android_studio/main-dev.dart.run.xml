@@ -1,7 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="main-dev.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
-    <option name="additionalArgs" value="--dart-define HTTP_BASE_URL=https://idp.richat-solutions.com --dart-define GOOGLE_MAPS_API_KEY_ENVIRONMENT_VARIABLE=AIzaSyAf1hwFWL3RoJl8YjEYAyAfypQeqLJzMuk" />
-    <option name="filePath" value="$PROJECT_DIR$/lib/main_dev.dart" />
-    <method v="2" />
-  </configuration>
-</component>

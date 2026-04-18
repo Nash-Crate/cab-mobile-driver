@@ -6,7 +6,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// About us header
 class AboutUsHeader extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AboutUsHeader({super.key});
 
   @override
@@ -16,9 +16,9 @@ class AboutUsHeader extends StatelessWidget {
         bottom: Radius.circular(80.r),
       ),
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(Assets.aboutUsHeaderBg),
+            image: AssetImage(Assets.aboutUs.headerBg.path),
             fit: BoxFit.fitWidth,
             opacity: .8,
           ),

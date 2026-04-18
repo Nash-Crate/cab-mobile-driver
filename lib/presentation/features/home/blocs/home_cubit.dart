@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/core.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'home_cubit.freezed.dart';
 part 'home_state.dart';
@@ -9,7 +9,7 @@ part 'home_state.dart';
 /// Home cubit
 @injectable
 class HomeCubit extends Cubit<HomeState> {
-  // ignore: public_member_api_docs
+  /// constructor
   HomeCubit() : super(HomeState.initial());
 
   /// Set pick up location

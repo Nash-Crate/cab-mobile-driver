@@ -8,7 +8,7 @@ part 'drawer_state.dart';
 /// Drawer cubit
 @singleton
 class DrawerCubit extends Cubit<DrawerState> {
-  // ignore: public_member_api_docs
+  /// constructor
   DrawerCubit() : super(const DrawerState.closed());
 
   /// open/ close the drawer

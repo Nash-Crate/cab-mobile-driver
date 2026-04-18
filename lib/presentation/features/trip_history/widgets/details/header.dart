@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history details header
 class TripDetailsHeader extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripDetailsHeader({super.key});
 
   @override

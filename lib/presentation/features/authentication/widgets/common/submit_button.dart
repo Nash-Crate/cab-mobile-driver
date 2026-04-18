@@ -6,7 +6,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Submit button for all auth pages
 class AuthSubmitButton extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AuthSubmitButton(this.formKey, {super.key});
 
   /// Form key for validation
@@ -25,7 +25,7 @@ class AuthSubmitButton extends StatelessWidget {
                 child: FilledButton(
                   onPressed: state is AuthActionsProcessing
                       ? null
-                      : () {
+                      : () async {
                           final fieldsState = context.read<AuthFieldsCubit>().state;
 
                           // validate form
@@ -34,13 +34,13 @@ class AuthSubmitButton extends StatelessWidget {
                               state is AuthActionsStep) {
                             if (state.isOnLogin) {
                               // check if the user exists
-                              authActionsCubit.checkLoginOtp(
+                              await authActionsCubit.checkLoginOtp(
                                 fieldsState.countryCallingCode,
                                 fieldsState.phoneNumber,
                               );
                             } else if (state.isOnRegister) {
                               // register by entering the user info
-                              authActionsCubit.register(
+                              await authActionsCubit.register(
                                 fieldsState.countryCallingCode,
                                 fieldsState.phoneNumber,
                                 fieldsState.firstName,
@@ -48,14 +48,14 @@ class AuthSubmitButton extends StatelessWidget {
                               );
                             } else if (state.isOnLoginVerification) {
                               // verify login by entering the code
-                              authActionsCubit.login(
+                              await authActionsCubit.login(
                                 fieldsState.countryCallingCode,
                                 fieldsState.phoneNumber,
                                 fieldsState.code,
                               );
                             } else if (state.isOnRegisterVerification) {
                               // register user by entering the code
-                              authActionsCubit.register(
+                              await authActionsCubit.register(
                                 fieldsState.countryCallingCode,
                                 fieldsState.phoneNumber,
                                 fieldsState.firstName,

@@ -1,12 +1,12 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mobile_driver/core/entities/entities.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'trip_location.freezed.dart';
 
 /// Trip location for trip's Start and End
 @freezed
-class TripLocation with _$TripLocation {
-  // ignore: public_member_api_docs
+abstract class TripLocation with _$TripLocation {
+  /// Constructor
   const factory TripLocation({
     required String locationName,
     required DateTime timestamp,
@@ -14,7 +14,8 @@ class TripLocation with _$TripLocation {
   }) = _TripLocation;
 
   @override
-  String toString() => '''
+  String toString() =>
+      '''
     TripLocation(
       locationName: $locationName,
       timestamp: $timestamp, 

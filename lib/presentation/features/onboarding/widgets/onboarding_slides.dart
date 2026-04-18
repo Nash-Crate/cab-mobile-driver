@@ -15,25 +15,25 @@ final slides = [
     title: t.onboarding.slides.smoothAndQuick.title,
     subTitle: t.onboarding.slides.smoothAndQuick.subtitle,
     description: t.onboarding.slides.smoothAndQuick.description,
-    icon: Assets.onboardingSmoothQuickIcon,
+    icon: Assets.onboarding.smoothQuickIcon.path,
   ),
   _OnboardingSlide(
     title: t.onboarding.slides.findNearby.title,
     subTitle: t.onboarding.slides.findNearby.subtitle,
     description: t.onboarding.slides.findNearby.description,
-    icon: Assets.onboardingFindNearbyIcon,
+    icon: Assets.onboarding.findNearbyIcon.path,
   ),
   _OnboardingSlide(
     title: t.onboarding.slides.feelCozy.title,
     subTitle: t.onboarding.slides.feelCozy.subtitle,
     description: t.onboarding.slides.feelCozy.description,
-    icon: Assets.onboardingFeelCozyIcon,
+    icon: Assets.onboarding.feelCozyIcon.path,
   ),
 ];
 
 /// Onboarding slides
 class OnboardingSlides extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const OnboardingSlides({super.key});
 
   @override

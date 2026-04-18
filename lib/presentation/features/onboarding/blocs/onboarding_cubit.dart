@@ -5,12 +5,13 @@ import 'package:mobile_driver/core/core.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 part 'onboarding_cubit.freezed.dart';
+
 part 'onboarding_state.dart';
 
 /// Onboarding cubit
 @singleton
 class OnboardingCubit extends Cubit<OnboardingState> {
-  /// ignore: public_member_api_docs
+  /// constructor
   OnboardingCubit(this._getOnboardingViewed, this._setOnboardingViewed)
       : super(const OnboardingState.initial());
 

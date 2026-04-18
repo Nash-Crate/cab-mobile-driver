@@ -6,8 +6,8 @@ part 'user_model.g.dart';
 
 /// User model
 @freezed
-class UserModel with _$UserModel {
-  // ignore: public_member_api_docs
+abstract class UserModel with _$UserModel {
+  /// constructor
   const factory UserModel({
     required String id,
   }) = _UserModel;

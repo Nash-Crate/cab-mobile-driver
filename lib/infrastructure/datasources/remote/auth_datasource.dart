@@ -2,6 +2,7 @@ import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile_driver/core/core.dart';
 import 'package:mobile_driver/infrastructure/infrastructure.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Remote datasource abstract interface for authentication
 abstract class AuthRemoteDatasource {
@@ -29,7 +30,7 @@ abstract class AuthRemoteDatasource {
 /// Remote datasource implementation for authentication
 @Singleton(as: AuthRemoteDatasource)
 class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
-  // ignore: public_member_api_docs
+  /// Constructor
   const AuthRemoteDatasourceImpl(this._client);
 
   final IHttpClient _client;
@@ -37,17 +38,17 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
   @override
   Future<Either<Failure, bool>> requestLoginCheckOtp(FullPhoneNumber phoneNumber) async {
     try {
-      final data = {'username': phoneNumber.getOrCrash};
+      // final data = {'username': phoneNumber.getOrCrash};
 
       // TODO(serverBug): fix
       return const Right(true);
-      final res = await _client.post(loginCheckOtpUrl, data: data);
-      if (res.statusCode.isNoContent) {
-        // not user found
-        return const Right(false);
-      }
-      return Right(res.statusCode.isOk);
-    } catch (e) {
+      // final res = await _client.post(loginCheckOtpUrl, data: data);
+      // if (res.statusCode.isNoContent) {
+      //   // not user found
+      //   return const Right(false);
+      // }
+      // return Right(res.statusCode.isOk);
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -71,7 +72,7 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
       final tokens = AuthTokensModel.fromJson(res.data);
 
       return Right(tokens);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -88,7 +89,7 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
       await _client.post(registerUserUrl, data: data);
 
       return const Right(unit);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -101,7 +102,7 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
       final user = UserModel.fromJson({'id': res.data['data']}).toDomain();
 
       return Right(user);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -121,7 +122,7 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
       );
 
       return const Right(unit);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -144,7 +145,7 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
       final tokens = AuthTokensModel.fromJson(res.data);
 
       return Right(tokens);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }

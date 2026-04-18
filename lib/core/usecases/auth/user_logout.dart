@@ -1,11 +1,12 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile_driver/core/core.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Usecase for user logout
 @singleton
 class UserLogout implements UsecaseNoParams<Unit> {
-  // ignore: public_member_api_docs
+  /// Constructor
   const UserLogout(this._authRepository);
 
   final IAuthRepository _authRepository;

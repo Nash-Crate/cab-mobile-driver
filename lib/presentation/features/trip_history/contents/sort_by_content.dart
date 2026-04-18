@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobile_driver/core/core.dart';
 import 'package:mobile_driver/i18n/translations.g.dart';
 import 'package:mobile_driver/presentation/features/trip_history/trip_history.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history sort by content
 class TripHistorySortByContent extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistorySortByContent({super.key});
 
   @override
@@ -46,9 +45,9 @@ class TripHistorySortByContent extends StatelessWidget {
                   (sortBy) => RadioListTile(
                     controlAffinity: ListTileControlAffinity.trailing,
                     value: sortBy,
-                    onChanged: (value) {
-                      if (value != null) context.read<TripHistoryCubit>().setSortBy(value);
-                      Navigator.of(context).pop();
+                    onChanged: (value) async {
+                      if (value != null) await context.read<TripHistoryCubit>().setSortBy(value);
+                      if (context.mounted) Navigator.of(context).pop();
                     },
                     groupValue: state.sortBy,
                     title: Text(

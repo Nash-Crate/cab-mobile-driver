@@ -1,5 +1,5 @@
-import 'package:mobile_driver/core/errors/errors.dart';
 import 'package:mobile_driver/i18n/translations.g.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Failures mapper
 extension FailuresMapper on Failure {

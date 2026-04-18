@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// About us welcome
 class AboutUsWelcome extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AboutUsWelcome({super.key});
 
   @override

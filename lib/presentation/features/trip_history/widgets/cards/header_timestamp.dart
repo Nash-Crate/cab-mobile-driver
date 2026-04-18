@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history card timestamp
 class TripHistoryCardTimestamp extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryCardTimestamp(this.timestamp, {super.key});
 
   /// Trip history card timestamp
@@ -15,7 +15,7 @@ class TripHistoryCardTimestamp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        AppSvgImage(LibAssets.commonCalendar, width: 50.w, height: 50.h),
+        AppSvgImage(LibAssets.svg.calendar.path, width: 50.w, height: 50.h),
         WSB(30.w),
         Text(
           DateFormat('dd MMM yyyy, HH:mm').format(timestamp),

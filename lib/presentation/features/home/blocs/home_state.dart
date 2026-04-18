@@ -1,10 +1,18 @@
-// ignore_for_file: public_member_api_docs
 part of 'home_cubit.dart';
 
-enum RideModeEnum { fixed, open }
+/// RideModeEnum defines the different ride modes available in the application.
+enum RideModeEnum {
+  /// fixed
+  fixed,
 
+  /// flexible
+  open
+}
+
+/// HomeState holds the state of the home feature, including pickup and drop-off locations, ride mode, ride type, and payment method.
 @freezed
-class HomeState with _$HomeState {
+abstract class HomeState with _$HomeState {
+  /// Factory constructor for HomeState
   const factory HomeState({
     LatLong? pickUpLocation,
     LatLong? dropOffLocation,
@@ -14,5 +22,6 @@ class HomeState with _$HomeState {
     String? payMethod,
   }) = _HomeState;
 
+  /// Initial state of the HomeState
   factory HomeState.initial() => const HomeState();
 }

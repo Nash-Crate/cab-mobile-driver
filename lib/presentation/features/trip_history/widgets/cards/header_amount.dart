@@ -4,7 +4,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history card amount
 class TripHistoryCardAmount extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryCardAmount(this.amount, {super.key});
 
   /// Trip amount

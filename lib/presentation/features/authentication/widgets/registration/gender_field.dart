@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_driver/core/core.dart';
 import 'package:mobile_driver/i18n/translations.g.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 /// Gender field
 class GenderField extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const GenderField({required this.label, super.key});
 
   /// Label
@@ -39,7 +38,7 @@ class GenderField extends StatelessWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(21.r)),
                   backgroundColor: Colors.white,
                   onPressed: () {},
-                  icon: AppSvgImage(LibAssets.commonFemaleSign, height: 65.h),
+                  icon: AppSvgImage(LibAssets.svg.femaleSign.path, height: 65.h),
                   label: Text(
                     t.common.gender.value[GenderEnum.female.name] ?? GenderEnum.female.name,
                     style: GoogleFonts.poppins(
@@ -61,7 +60,7 @@ class GenderField extends StatelessWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(21.r)),
                   backgroundColor: Colors.white,
                   onPressed: () {},
-                  icon: AppSvgImage(LibAssets.commonMaleSign, height: 65.h),
+                  icon: AppSvgImage(LibAssets.svg.maleSign.path, height: 65.h),
                   label: Text(
                     t.common.gender.value[GenderEnum.male.name] ?? GenderEnum.male.name,
                     style: GoogleFonts.poppins(

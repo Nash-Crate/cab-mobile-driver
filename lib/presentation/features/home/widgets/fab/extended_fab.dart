@@ -3,7 +3,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Extended floating action button for home page's use
 class HomeExtendedFab extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const HomeExtendedFab({
     required this.fillColor,
     required this.iconPath,

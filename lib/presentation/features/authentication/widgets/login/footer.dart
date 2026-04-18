@@ -6,7 +6,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// footer for Login content
 class LoginFooter extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const LoginFooter({super.key});
 
   @override
@@ -31,9 +31,9 @@ class LoginFooter extends StatelessWidget {
                       return LanguageSelectView(
                         activeLocale: activeLocale,
                         appLocales: AppLocale.values.map((a) => a.languageCode).toList(),
-                        onSelected: (locale) {
-                          context.read<I18nCubit>().changeAppLocale(locale);
-                          Navigator.pop(context);
+                        onSelected: (locale) async {
+                          await context.read<I18nCubit>().changeAppLocale(locale);
+                          if (context.mounted) Navigator.pop(context);
                         },
                       );
                     },

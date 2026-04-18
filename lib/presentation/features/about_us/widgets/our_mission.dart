@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// About us our mission
 class AboutUsOurMission extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AboutUsOurMission({super.key});
 
   @override
@@ -34,7 +34,7 @@ class AboutUsOurMission extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 300.w, child: const AppSvgImage(Assets.aboutUsCenterSeparator)),
+            SizedBox(width: 300.w, child: AppSvgImage(Assets.aboutUs.centerSeparator.path)),
             HSB(40.h),
             Text(
               t.aboutUs.mission.description,

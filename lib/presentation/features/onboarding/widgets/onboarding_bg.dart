@@ -6,7 +6,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Onboarding background
 class OnboardingBackground extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const OnboardingBackground({super.key});
 
   @override
@@ -18,17 +18,11 @@ class OnboardingBackground extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topRight,
-            child: AppSvgImage(
-              Assets.onboardingTopIllustration,
-              width: 1.sw,
-            ),
+            child: AppSvgImage(Assets.onboarding.topIllustration.path, width: 1.sw),
           ),
           Align(
             alignment: Alignment.bottomLeft,
-            child: AppSvgImage(
-              Assets.onboardingBottomIllustration,
-              height: .3.sh,
-            ),
+            child: AppSvgImage(Assets.onboarding.bottomIllustration.path, height: .3.sh),
           ),
           BackdropFilter(
             filter: ui.ImageFilter.blur(

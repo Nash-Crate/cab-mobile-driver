@@ -4,7 +4,7 @@ import 'package:mobile_driver/core/core.dart';
 import 'package:mobile_driver/presentation/constants/constants.dart';
 import 'package:mobile_library/mobile_library.dart';
 
-final _style = GoogleFonts.poppins(
+final TextStyle _style = GoogleFonts.poppins(
   textStyle: TextStyle(
     color: Colors.black,
     fontSize: 42.sp,
@@ -14,7 +14,7 @@ final _style = GoogleFonts.poppins(
 
 /// Trip history card body
 class TripHistoryCardBody extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryCardBody(this.trip, {super.key});
 
   /// Trip
@@ -77,14 +77,14 @@ class TripHistoryCardBody extends StatelessWidget {
           Positioned(
             top: 0,
             left: 0,
-            child: AppSvgImage(Assets.tripHistoryPickUp, width: 72.w, height: 72.h),
+            child: AppSvgImage(Assets.tripHistory.pickUp.path, width: 72.w, height: 72.h),
           ),
           Positioned(
             bottom: 0,
             left: 0,
             child: SizedBox(
               width: 72.w,
-              child: AppSvgImage(Assets.tripHistoryDropOff, width: 54.w, height: 77.h),
+              child: AppSvgImage(Assets.tripHistory.dropOff.path, width: 54.w, height: 77.h),
             ),
           ),
         ],

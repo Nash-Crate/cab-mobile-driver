@@ -9,7 +9,7 @@ import 'package:mobile_library/mobile_library.dart';
 /// Http client implementation for [Dio] library
 @Singleton(as: IHttpClient)
 class DioHttpClientImpl implements IHttpClient {
-  // ignore: public_member_api_docs
+  /// constructor
   DioHttpClientImpl(this._client, this._networkInfo, this._authLocalDatasource) {
     _client.interceptors.add(
       // to avoid circular dependency with AuthRemoteDatasource

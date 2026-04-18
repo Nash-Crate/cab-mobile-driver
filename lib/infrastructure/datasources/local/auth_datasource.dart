@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/core.dart';
 import 'package:mobile_driver/infrastructure/infrastructure.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Local datasource abstract interface for authentication
 abstract class AuthLocalDatasource {
@@ -23,7 +23,7 @@ abstract class AuthLocalDatasource {
 /// Local datasource implementation for authentication
 @Singleton(as: AuthLocalDatasource)
 class AuthLocalDatasourceImpl extends AuthLocalDatasource {
-  // ignore: public_member_api_docs
+  /// constructor
   AuthLocalDatasourceImpl(this._cacheStorage);
 
   final ICacheStorage _cacheStorage;
@@ -33,7 +33,7 @@ class AuthLocalDatasourceImpl extends AuthLocalDatasource {
     try {
       final result = await _cacheStorage.read<String>(key: CacheKeys.token.name);
       return Right(result != null);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -50,7 +50,7 @@ class AuthLocalDatasourceImpl extends AuthLocalDatasource {
       final tokensString = jsonEncode(tokens.toJson());
       await _cacheStorage.upsert<String>(key: CacheKeys.token.name, data: tokensString);
       return const Right(unit);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -65,7 +65,7 @@ class AuthLocalDatasourceImpl extends AuthLocalDatasource {
       }
 
       return const Right(null);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -76,7 +76,7 @@ class AuthLocalDatasourceImpl extends AuthLocalDatasource {
       final isExpired = JwtDecoder.isExpired(accessToken);
       if (isExpired) return const Left(Failure.authFailure(AuthFailure.tokenExpired()));
       return const Right(false);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }

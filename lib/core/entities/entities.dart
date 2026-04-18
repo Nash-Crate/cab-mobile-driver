@@ -1,5 +1,4 @@
 //GENERATED BARREL FILE
-export 'lat_long.dart';
 export 'list_response.dart';
 export 'pay_method.dart';
 export 'ride.dart';

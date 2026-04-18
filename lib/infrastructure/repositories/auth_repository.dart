@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 /// implementation of the IAuthRepository
 @Singleton(as: IAuthRepository)
 class AuthRepository implements IAuthRepository {
-  // ignore: public_member_api_docs
+  /// constructor
   const AuthRepository(this._remoteDatasource, this._localDatasource);
 
   final AuthRemoteDatasource _remoteDatasource;

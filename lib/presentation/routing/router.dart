@@ -12,6 +12,7 @@ import 'package:mobile_driver/presentation/features/onboarding/onboarding.dart';
 import 'package:mobile_driver/presentation/features/settings/settings.dart';
 import 'package:mobile_driver/presentation/features/splash/splash.dart';
 import 'package:mobile_driver/presentation/features/trip_history/trip_history.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'custom_extra_codec.dart';
 part 'route_extras/trip_details.dart';

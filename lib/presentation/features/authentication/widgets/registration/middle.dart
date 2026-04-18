@@ -6,7 +6,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Registration view's middle contents
 class RegistrationMiddle extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const RegistrationMiddle({super.key});
 
   @override

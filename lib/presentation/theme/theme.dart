@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 part 'app_colors.dart';
 
 /// Light theme
-final lightTheme = ThemeData.light().copyWith(
+final ThemeData lightTheme = ThemeData.light().copyWith(
   brightness: Brightness.light,
   colorScheme: const ColorScheme.light(
     /* primary */
@@ -127,7 +127,7 @@ final lightTheme = ThemeData.light().copyWith(
   appBarTheme: const AppBarTheme(
     surfaceTintColor: Colors.transparent,
   ),
-  dialogTheme: DialogTheme(
+  dialogTheme: DialogThemeData(
     titleTextStyle: GoogleFonts.poppins(
       textStyle: TextStyle(
         color: kInputText,
@@ -208,7 +208,7 @@ final _inputDecorationTheme = InputDecorationTheme(
     ),
   ),
   hintStyle: TextStyle(
-    color: kInputText.withOpacity(.5),
+    color: kInputText.withValues(alpha: .5),
     fontSize: 48.sp,
     fontWeight: FontWeight.w400,
     // fontFamily: 'Poppins',

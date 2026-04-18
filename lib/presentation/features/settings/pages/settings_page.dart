@@ -6,7 +6,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Settings page
 class SettingsPage extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const SettingsPage({super.key});
 
   /// router path

@@ -4,7 +4,7 @@ import 'package:mobile_driver/presentation/features/trip_history/trip_history.da
 
 /// Trip history list
 class TripHistoryList extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryList({super.key});
 
   @override

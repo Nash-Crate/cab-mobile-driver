@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// About us how we serve card
 class HowWeServeCard extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const HowWeServeCard({
     required this.title,
     required this.description,
@@ -123,8 +123,8 @@ class HowWeServeCard extends StatelessWidget {
                 height: 150.h,
                 child: AppSvgImage(
                   reverse
-                      ? Assets.aboutUsCircleArrowAntiClockwise
-                      : Assets.aboutUsCircleArrowClockwise,
+                      ? Assets.aboutUs.circleArrowAntiClockwise.path
+                      : Assets.aboutUs.circleArrowClockwise.path,
                 ),
               ),
             ),

@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Leading back widget with button and vertical divider for Register page
 class RegisterLeadingBack extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const RegisterLeadingBack({super.key});
 
   @override
@@ -17,7 +17,7 @@ class RegisterLeadingBack extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 50.h),
             child: AppSvgImage(
-              LibAssets.commonChevronLeft,
+              LibAssets.svg.chevronLeft.path,
               alignment: Alignment.centerLeft,
               height: 80.h,
               width: 180.w,

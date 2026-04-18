@@ -9,7 +9,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Home page of the app
 class HomePage extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const HomePage({super.key});
 
   /// Home page path

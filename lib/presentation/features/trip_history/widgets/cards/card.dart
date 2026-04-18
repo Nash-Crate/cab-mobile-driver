@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history card
 class TripHistoryCard extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryCard(this.trip, {super.key});
 
   /// Trip data
@@ -30,7 +30,7 @@ class TripHistoryCard extends StatelessWidget {
               BoxShadow(
                 offset: const Offset(0, 1),
                 blurRadius: 20,
-                color: Colors.grey.withOpacity(.1),
+                color: Colors.grey.withValues(alpha: .1),
               ),
             ],
           ),

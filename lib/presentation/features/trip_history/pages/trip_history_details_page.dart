@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -9,7 +11,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history details page
 class TripHistoryDetailsPage extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryDetailsPage({super.key});
 
   /// Trip history details page route
@@ -38,7 +40,9 @@ class _TripHistoryDetailsPageState extends State<TripHistoryDetailsPage> {
       create: (ctx) {
         final goExtra = GoRouterState.of(context).extra;
         final data = goExtra is TripDetailsRouteExtra ? goExtra : null;
-        return getIt<TripHistoryDetailsCubit>(param1: data!.toTrip())..fetch();
+        final cubit = getIt<TripHistoryDetailsCubit>(param1: data!.toTrip());
+        unawaited(cubit.fetch());
+        return cubit;
       },
       child: Builder(
         builder: (context) {

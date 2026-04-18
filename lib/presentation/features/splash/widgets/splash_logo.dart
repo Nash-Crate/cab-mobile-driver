@@ -4,7 +4,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Splash logo
 class SplashLogo extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const SplashLogo({required this.visible, super.key});
 
   /// logo visibility toggle
@@ -57,7 +57,7 @@ class _SplashLogoState extends State<SplashLogo> with TickerProviderStateMixin {
           child: SizedBox(
             width: 0.8.sw,
             height: 0.8.sw,
-            child: const AppImage(Assets.imageLogo),
+            child: AppImage(Assets.logo.logo.path),
           ),
         ),
       ),

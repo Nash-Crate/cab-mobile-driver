@@ -15,93 +15,95 @@ dependencies:
     sdk: flutter
 
   # annotations
-  freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.11.0
 
   # api utils
-  dio: ^5.4.2+1
+  dio: ^5.9.2
 
   # caching
-  shared_preferences: ^2.2.2
+  shared_preferences: ^2.5.5
 
   # DI
-  get_it: ^7.6.8
-  injectable: ^2.4.1
+  get_it: ^9.2.1
+  injectable: ^2.7.1+4
 
   # functional
-  fpdart: ^1.1.0
+  fpdart: ^1.2.0
 
   # i18n
   flutter_localizations:
     sdk: flutter
-  intl: ^0.19.0
-  slang: ^3.30.2
-  slang_flutter: ^3.30.0
+  intl: ^0.20.2
+  slang: ^4.14.0
+  slang_flutter: ^4.14.0
 
   # icons
-  cupertino_icons: ^1.0.6
+  cupertino_icons: ^1.0.9
 
   # image utils
-  cached_network_image: ^3.3.1
-  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.4.1
+  flutter_svg: ^2.2.4
 
   # mocking
   http_mock_adapter: ^0.6.1
 
   # routing
-  go_router: ^13.2.2
+  go_router: ^17.2.1
 
   # state management
-  flutter_bloc: ^8.1.5
+  flutter_bloc: ^9.1.1
 
   # UI helpers
-  flutter_local_notifications: ^17.0.0
-  flutter_screenutil: ^5.9.0
+  flutter_local_notifications: ^21.0.0
+  flutter_screenutil: ^5.9.3
 
   # UI components
   bot_toast: ^4.1.3
-  carousel_slider: ^5.0.0
-  flutter_polyline_points: ^2.1.0
-  geolocator: ^12.0.0
-  google_maps_flutter: ^2.7.0
-  pin_code_fields: ^8.0.1
+  carousel_slider: ^5.1.2
+  flutter_polyline_points: ^3.1.0
+  geolocator: ^14.0.2
+  google_maps_flutter: ^2.17.0
+  pin_code_fields: ^9.3.0
   sliver_tools: ^0.2.12
-  smooth_page_indicator: ^1.1.0
+  smooth_page_indicator: ^2.0.1
 
   # utils
+  device_region: ^1.4.0
   flow_builder: ^0.1.0
-  google_fonts: ^6.2.1
-  internet_connection_checker_plus: ^2.3.0
-  location: ^6.0.2
-  logger: ^2.2.0
-  url_launcher: ^6.2.5
+  google_fonts: ^8.0.2
+  internet_connection_checker_plus: ^2.9.1+2
+  location: ^8.0.1
+  logger: ^2.7.0
+  phonecodes: ^0.0.4
+  url_launcher: ^6.3.2
   validators: ^3.0.0
 
   # custom
   mobile_library:
-    path: ../mobile-library
+    path: ../cab-library
 
 dev_dependencies:
   # code analyzers
-  very_good_analysis: ^5.1.0
+  very_good_analysis: ^10.2.0
 
   # generators
-  build_runner: ^2.4.9
-  flutter_launcher_icons: ^0.13.1
-  freezed: ^2.4.7
-  injectable_generator: ^2.6.1
-  json_serializable: ^6.7.1
+  build_runner: ^2.13.1
+  flutter_launcher_icons: ^0.14.4
+  freezed: ^3.2.5
+  injectable_generator: ^2.12.1
+  json_serializable: ^6.13.1
 
   # testing
   flutter_test:
     sdk: flutter
   integration_test:
     sdk: flutter
-  bloc_test: ^9.1.7
-  mockito: ^5.4.4
+  bloc_test: ^10.0.0
+  mockito: ^5.6.4
 
-dependency_overrides:
-  intl: ^0.19.0
+#dependency_overrides:
+#  intl: ^0.20.2
 #  meta: ^1.14.0
 
 flutter:
@@ -110,23 +112,21 @@ flutter:
 
   assets:
     - assets/
-    - assets/svg/
-    - assets/svg/about_us/
-    - assets/svg/auth/
-    - assets/svg/contact_us/
-    - assets/svg/home/
-    - assets/svg/home/drawer/
-    - assets/svg/onboarding/
-    - assets/svg/splash/
-    - assets/svg/trip_history/
-    - assets/image/
-    - assets/image/about_us/
-    - assets/image/auth/
-    - assets/image/home/trip/
     - assets/fonts/
     - assets/fonts/proxima-nova/
-    - assets/image/home/
-    - assets/image/auth/header_bg.jpeg
+    - assets/auth/
+    - assets/home/
+    - assets/home/trip/
+    - assets/home/drawer/
+    - assets/logo/
+    - assets/ride/
+    - assets/common/
+    - assets/splash/
+    - assets/about_us/
+    - assets/contact_us/
+    - assets/onboarding/
+    - assets/onboarding/svg/
+    - assets/trip_history/
 
   fonts:
     - family: ProximaNova
@@ -144,3 +144,20 @@ flutter:
           weight: 700
         - asset: assets/fonts/proxima-nova/ProximaNova-ExtraBold.ttf
           weight: 900
+
+
+flutter_assets_generator:
+  # Optional. Sets the directory of generated localization files. Provided value should be a valid path on lib dir. Default: generated
+  output_dir: presentation/constants/
+  # Optional. Sets whether automatic monitoring of file changes. Default: true
+  auto_detection: true
+  # Optional. Sets file name conversion rules. Default: true
+  named_with_parent: true
+  # Optional. Sets the name for the generated localization file. Default: assets
+  output_filename: assets.generated
+  # Optional. Sets the name for the generated localization class. Default: Assets
+  class_name: Assets
+  # Optional. Sets the filename split pattern for filename split. Default: [-_]
+  filename_split_pattern: "[-_]"
+  # Optional. Configuring ignore paths. Default: [],e.g: ["assets/fonts", "assets/images/dark", ...]
+  path_ignore: [ ]

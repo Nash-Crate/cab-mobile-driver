@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Contact us page
 class ContactUsPage extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const ContactUsPage({super.key});
 
   /// router path

@@ -13,12 +13,15 @@ extension HttpResponseStatusCodeX on int? {
 
   /// Confirm that the status code is 204
   bool get isNoContent => this != null && this! == 204;
+
+  /// Confirm that the status code is 400
+  bool get isBadRequest => this != null && this! == 400;
 }
 
 /// Response model for 'http' requests.
 @freezed
-class HttpResponseModel with _$HttpResponseModel {
-  // ignore: public_member_api_docs
+abstract class HttpResponseModel with _$HttpResponseModel {
+  /// constructor
   const factory HttpResponseModel({
     /// The response payload in specific type.
     ///

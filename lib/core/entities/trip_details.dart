@@ -5,8 +5,8 @@ part 'trip_details.freezed.dart';
 
 /// Trip details
 @freezed
-class TripDetails with _$TripDetails {
-  // ignore: public_member_api_docs
+abstract class TripDetails with _$TripDetails {
+  /// constructor
   const factory TripDetails({
     required String id,
     required DateTime timestamp,

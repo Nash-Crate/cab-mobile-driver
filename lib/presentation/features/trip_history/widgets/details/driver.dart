@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip details driver
 class TripDetailsDriver extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripDetailsDriver({super.key});
 
   @override

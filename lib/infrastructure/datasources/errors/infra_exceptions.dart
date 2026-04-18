@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:mobile_driver/core/errors/errors.dart';
 import 'package:mobile_driver/i18n/translations.g.dart';
 import 'package:mobile_driver/logger.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'dio_exceptions.dart';
 part 'infra_exceptions.freezed.dart';

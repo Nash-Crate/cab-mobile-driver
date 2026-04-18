@@ -14,13 +14,13 @@ part of 'theme.dart';
 const kPrimary = Color.fromRGBO(76, 208, 128, 1);
 
 /// onPrimary
-const kOnPrimary = Colors.white;
+const Color kOnPrimary = Colors.white;
 
 /// secondary
 const kSecondary = Color.fromRGBO(255, 199, 39, 1);
 
 /// onSecondary
-const kOnSecondary = Colors.white;
+const Color kOnSecondary = Colors.white;
 
 /// background
 const kSurface = Color.fromRGBO(242, 245, 248, 1);

@@ -1,13 +1,12 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/errors/failures.dart';
 import 'package:mobile_driver/core/repositories/repositories.dart';
-import 'package:mobile_driver/core/usecases/usecase.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Cache language code to the device
 @singleton
 class CacheLanguageCode implements Usecase<Unit, String> {
-  // ignore: public_member_api_docs
+  /// Constructor
   const CacheLanguageCode(this._repository);
 
   final II18nRepository _repository;

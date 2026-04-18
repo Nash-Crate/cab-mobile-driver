@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Floating action button to move the camera to current location
 class CurrentPositionFab extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const CurrentPositionFab({super.key});
 
   @override

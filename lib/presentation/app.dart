@@ -13,11 +13,11 @@ import 'package:mobile_driver/presentation/routing/router.dart';
 import 'package:mobile_driver/presentation/theme/theme.dart';
 
 /// BotToast builder
-final botToastBuilder = BotToastInit();
+final TransitionBuilder botToastBuilder = BotToastInit();
 
 /// Main app
 class App extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const App({super.key});
 
   @override
@@ -31,13 +31,13 @@ class _AppState extends State<App> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       // pre-cache asset images
-      _preCacheAssetImages();
+      await _preCacheAssetImages();
     });
   }
 
-  void _preCacheAssetImages() {
-    precacheImage(const AssetImage(Assets.imageLogo), context);
-    precacheImage(const AssetImage(Assets.authHeaderBg), context);
+  Future<void> _preCacheAssetImages() async {
+    await precacheImage(AssetImage(Assets.logo.logo.path), context);
+    if (mounted) await precacheImage(AssetImage(Assets.auth.headerBg.path), context);
   }
 
   @override
@@ -46,7 +46,8 @@ class _AppState extends State<App> {
     return TranslationProvider(
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context) => getIt<I18nCubit>()..init()),
+          BlocProvider(create: (context) => getIt<AppConfigsCubit>(), lazy: false),
+          BlocProvider(create: (context) => getIt<I18nCubit>()),
           BlocProvider(create: (context) => getIt<OnboardingCubit>()),
           BlocProvider(create: (context) => getIt<AuthActionsCubit>()),
           BlocProvider(create: (context) => getIt<DrawerCubit>()),

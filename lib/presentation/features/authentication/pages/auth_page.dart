@@ -8,7 +8,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Authentication page
 class AuthPage extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AuthPage({super.key});
 
   /// router path

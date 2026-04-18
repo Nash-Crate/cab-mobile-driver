@@ -1,12 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mobile_driver/core/core.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'trip.freezed.dart';
 
 /// Trip entity
 @freezed
-class Trip with _$Trip {
-  // ignore: public_member_api_docs
+abstract class Trip with _$Trip {
+  /// Constructor
   const factory Trip({
     required String id,
     required TripTypeEnum tripType,

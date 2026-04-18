@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history sort by
 class TripHistorySortBy extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistorySortBy({super.key});
 
   @override
@@ -29,8 +29,8 @@ class TripHistorySortBy extends StatelessWidget {
                 ),
               ),
             ),
-            onPressed: () {
-              showModalBottomSheet<void>(
+            onPressed: () async {
+              await showModalBottomSheet<void>(
                 context: context,
                 useRootNavigator: true,
                 useSafeArea: true,
@@ -47,7 +47,7 @@ class TripHistorySortBy extends StatelessWidget {
                   style: context.textTheme.bodySmall?.copyWith(color: Colors.black),
                 ),
                 WSB(40.w),
-                AppSvgImage(LibAssets.commonSort, width: 43.w, height: 36.h),
+                AppSvgImage(LibAssets.svg.sort.path, width: 43.w, height: 36.h),
               ],
             ),
           ),

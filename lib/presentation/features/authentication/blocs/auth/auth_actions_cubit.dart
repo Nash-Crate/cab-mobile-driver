@@ -1,7 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/core.dart';
+import 'package:mobile_driver/core/entities/entities.dart';
+import 'package:mobile_driver/core/usecases/usecases.dart';
 import 'package:mobile_driver/presentation/extensions/extensions.dart';
 import 'package:mobile_library/mobile_library.dart';
 
@@ -11,7 +12,7 @@ part 'auth_actions_state.dart';
 /// Authentication cubit
 @singleton
 class AuthActionsCubit extends Cubit<AuthActionsState> {
-  // ignore: public_member_api_docs
+  /// constructor
   AuthActionsCubit(
     this._checkAuth,
     this._getUser,

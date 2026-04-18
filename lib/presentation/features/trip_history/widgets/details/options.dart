@@ -5,7 +5,7 @@ import 'package:mobile_driver/presentation/constants/constants.dart';
 import 'package:mobile_driver/presentation/features/trip_history/trip_history.dart';
 import 'package:mobile_library/mobile_library.dart';
 
-final _style = GoogleFonts.poppins(
+final TextStyle _style = GoogleFonts.poppins(
   textStyle: TextStyle(
     color: Colors.black,
     fontSize: 42.sp,
@@ -15,7 +15,7 @@ final _style = GoogleFonts.poppins(
 
 /// Trip details options such as class and payment method
 class TripDetailsOptions extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripDetailsOptions({super.key});
 
   @override
@@ -59,7 +59,7 @@ class TripDetailsOptions extends StatelessWidget {
                         Expanded(
                           child: SizedBox(
                             height: 120.h,
-                            child: const AppImage(Assets.tripStandardClassCarCropped),
+                            child: AppImage(Assets.home.trip.standardClassCarCropped.path),
                           ),
                         ),
                       ],
@@ -89,7 +89,10 @@ class TripDetailsOptions extends StatelessWidget {
                           child: SizedBox(
                             width: 158.w,
                             height: 179.h,
-                            child: const AppImage(Assets.tripPayMethodCash, fit: BoxFit.contain),
+                            child: AppImage(
+                              Assets.home.trip.payMethodCash.path,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                         Align(

@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history card header
 class TripHistoryCardHeader extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryCardHeader(this.trip, {super.key});
 
   /// Trip history item

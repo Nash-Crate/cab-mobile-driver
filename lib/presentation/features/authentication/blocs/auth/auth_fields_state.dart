@@ -1,8 +1,9 @@
-// ignore_for_file: public_member_api_docs
 part of 'auth_fields_cubit.dart';
 
+/// AuthFieldsState defines the state of the authentication fields in the application.
 @freezed
-class AuthFieldsState with _$AuthFieldsState {
+abstract class AuthFieldsState with _$AuthFieldsState {
+  /// Factory constructor for AuthFieldsState
   const factory AuthFieldsState({
     // common
     required PhoneNumber phoneNumber,
@@ -13,6 +14,7 @@ class AuthFieldsState with _$AuthFieldsState {
     required LastName lastName,
   }) = _AuthFieldsState;
 
+  /// Initial state of the AuthFieldsState
   factory AuthFieldsState.initial() {
     return AuthFieldsState(
       phoneNumber: PhoneNumber(null),

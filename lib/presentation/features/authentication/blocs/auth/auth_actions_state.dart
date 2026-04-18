@@ -1,14 +1,30 @@
-// ignore_for_file: public_member_api_docs
 part of 'auth_actions_cubit.dart';
 
-enum ActionStepEnum { login, register, loginVerification, registerVerification }
+/// Enum for the different steps in the authentication process
+enum ActionStepEnum {
+  /// Step for login
+  login,
 
+  /// Step for register
+  register,
+
+  /// Step for login verification
+  loginVerification,
+
+  /// Step for register verification
+  registerVerification
+}
+
+/// State for authentication actions
 @freezed
 class AuthActionsState with _$AuthActionsState {
+  /// Initial state
   const factory AuthActionsState.processing(ActionStepEnum step) = AuthActionsProcessing;
 
+  /// Step state
   const factory AuthActionsState.step(ActionStepEnum step) = AuthActionsStep;
 
+  /// Authenticated state
   const factory AuthActionsState.authenticated(User user) = Authenticated;
 
   // const factory AuthActionsState.error(String error, ActionStepEnum step) = AuthActionsError;

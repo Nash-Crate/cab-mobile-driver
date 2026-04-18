@@ -1,5 +1,5 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:mobile_driver/core/entities/entities.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// GoogleMap LatLng extensions
 extension GoogleMapLatLngX on LatLng {

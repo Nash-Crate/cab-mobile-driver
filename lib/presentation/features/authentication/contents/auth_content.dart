@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_driver/i18n/translations.g.dart';
-import 'package:mobile_driver/presentation/constants/constants.dart';
 import 'package:mobile_driver/presentation/features/authentication/authentication.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 /// Auth contents
 class AuthContent extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AuthContent({super.key});
 
   @override

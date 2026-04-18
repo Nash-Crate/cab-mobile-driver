@@ -1,15 +1,16 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:mobile_driver/core/entities/user.dart';
-import 'package:mobile_driver/core/errors/failures.dart';
 import 'package:mobile_driver/core/usecases/usecases.dart';
-import 'package:mobile_driver/core/value_objects/value_objects.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Interface for authentication repository
 abstract class IAuthRepository {
   /// Send a login check otp
   ///
   /// returns 'true' if user exists
-  Future<Either<Failure, bool>> requestLoginCheckOtp(FullPhoneNumber phoneNumber);
+  Future<Either<Failure, bool>> requestLoginCheckOtp(
+    FullPhoneNumber phoneNumber,
+  );
 
   /// Send a rider login request to the server
   Future<Either<Failure, Unit>> riderLogin(LoginRiderParams params);
@@ -17,7 +18,7 @@ abstract class IAuthRepository {
   /// Send a rider signup request to the server
   Future<Either<Failure, Unit>> riderSignUp(RiderSignUpParams params);
 
-  /// Check if previous auth tokens exists
+  /// Check if previous svg tokens exists
   Future<Either<Failure, bool>> checkAuth();
 
   /// Get the current user

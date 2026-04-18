@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// 'Skeleton' for Trip history card
 class TripHistoryCardSkeleton extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryCardSkeleton({super.key});
 
   @override

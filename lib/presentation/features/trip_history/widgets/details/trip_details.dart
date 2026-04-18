@@ -3,7 +3,7 @@ import 'package:mobile_driver/presentation/features/trip_history/trip_history.da
 
 /// Trip details container
 class TripDetails extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripDetails({super.key});
 
   @override

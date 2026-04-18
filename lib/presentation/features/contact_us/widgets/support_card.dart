@@ -4,7 +4,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Support card for contacts
 class ContactUsSupportCard extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const ContactUsSupportCard({
     required this.title,
     required this.svgIcon,

@@ -8,7 +8,7 @@ part 'home_map_state.dart';
 /// Home map cubit
 @injectable
 class HomeMapCubit extends Cubit<HomeMapState> {
-  // ignore: public_member_api_docs
+  /// constructor
   HomeMapCubit() : super(const HomeMapState.initial());
 
   /// reset the state

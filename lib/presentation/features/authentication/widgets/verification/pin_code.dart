@@ -1,15 +1,12 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mobile_driver/core/value_objects/value_objects.dart';
 import 'package:mobile_driver/presentation/features/authentication/authentication.dart';
 import 'package:mobile_library/mobile_library.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 /// Verification pin code section
 class VerificationPinCode extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// Constructor
   const VerificationPinCode({super.key});
 
   @override
@@ -17,16 +14,14 @@ class VerificationPinCode extends StatefulWidget {
 }
 
 class _VerificationPinCodeState extends State<VerificationPinCode> {
-  late TextEditingController _codeController;
-  late StreamController<ErrorAnimationType> errorController;
+  late PinInputController _controller;
 
   @override
   void initState() {
     super.initState();
 
     // will be auto disposed from the library
-    _codeController = TextEditingController();
-    errorController = StreamController<ErrorAnimationType>();
+    _controller = PinInputController();
   }
 
   @override
@@ -35,12 +30,14 @@ class _VerificationPinCodeState extends State<VerificationPinCode> {
       selector: (state) => state.code,
       builder: (context, state) {
         return AppPinCodeField(
-          controller: _codeController,
-          onCompleted: (code) {
+          controller: _controller,
+          onCompleted: (code) async {
             final fieldsState = context.read<AuthFieldsCubit>().state;
-            context
-                .read<AuthActionsCubit>()
-                .login(fieldsState.countryCallingCode, fieldsState.phoneNumber, fieldsState.code);
+            await context.read<AuthActionsCubit>().login(
+                  fieldsState.countryCallingCode,
+                  fieldsState.phoneNumber,
+                  fieldsState.code,
+                );
           },
           onChanged: context.read<AuthFieldsCubit>().onChangeCode,
           validator: (v) {

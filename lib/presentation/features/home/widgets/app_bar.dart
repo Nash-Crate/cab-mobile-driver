@@ -8,7 +8,7 @@ const _amount = 200;
 
 /// Home app bar
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const HomeAppBar({required this.onPressed, super.key});
 
   /// onPressed
@@ -29,7 +29,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       leadingWidth: 100.w + 158.w,
       leading: DrawerMenuButton(
         onPressed: onPressed,
-        assetIcon: LibAssets.commonMenu,
+        assetIcon: LibAssets.svg.menu.path,
       ),
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),

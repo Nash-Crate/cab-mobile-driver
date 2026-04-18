@@ -4,8 +4,8 @@ part 'user.freezed.dart';
 
 /// User entity
 @freezed
-class User with _$User {
-  // ignore: public_member_api_docs
+abstract class User with _$User {
+  /// constructor
   const factory User({
     required String id,
   }) = _User;

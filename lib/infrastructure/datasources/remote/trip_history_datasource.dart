@@ -1,9 +1,9 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile_driver/core/entities/entities.dart';
-import 'package:mobile_driver/core/errors/errors.dart';
 import 'package:mobile_driver/core/params/params.dart';
 import 'package:mobile_driver/core/repositories/repositories.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// TripHistoryRemoteDatasource interface
 abstract class TripHistoryRemoteDatasource extends ITripHistoryRepository {}
@@ -18,7 +18,7 @@ class TripHistoryRemoteDatasourceImpl implements TripHistoryRemoteDatasource {
     await Future<void>.delayed(const Duration(seconds: 1));
 
     if (params.page == 2) {
-      return Right(
+      return const Right(
         ListResponse(
           page: 2,
           totalPages: 2,
@@ -53,7 +53,7 @@ class TripHistoryRemoteDatasourceImpl implements TripHistoryRemoteDatasource {
         ),
       );
     }
-    return Right(
+    return const Right(
       ListResponse(
         page: 1,
         totalPages: 2,

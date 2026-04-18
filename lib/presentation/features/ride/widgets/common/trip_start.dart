@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// Trip start widget
 class TripStart extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripStart({super.key});
 
   @override

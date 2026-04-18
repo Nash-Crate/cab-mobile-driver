@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Authentication verification content
 class AuthVerificationContent extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AuthVerificationContent({super.key});
 
   @override

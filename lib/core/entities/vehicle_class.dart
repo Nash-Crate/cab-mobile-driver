@@ -4,8 +4,8 @@ part 'vehicle_class.freezed.dart';
 
 /// Vehicle class
 @freezed
-class VehicleClass with _$VehicleClass {
-  // ignore: public_member_api_docs
+abstract class VehicleClass with _$VehicleClass {
+  /// constructor
   const factory VehicleClass({
     required String id,
     required String name,

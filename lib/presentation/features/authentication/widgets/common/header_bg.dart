@@ -4,15 +4,15 @@ import 'package:mobile_driver/presentation/constants/constants.dart';
 // TODO(improve): improve
 /// Header background
 class HeaderBg extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const HeaderBg({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(Assets.authHeaderBg),
+          image: AssetImage(Assets.auth.headerBg.path),
           fit: BoxFit.fitHeight,
         ),
       ),

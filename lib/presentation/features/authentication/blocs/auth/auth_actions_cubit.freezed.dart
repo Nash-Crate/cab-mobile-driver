@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,384 +9,428 @@ part of 'auth_actions_cubit.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-
-final _privateConstructorUsedError = UnsupportedError('It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AuthActionsState {
-
-
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( ActionStepEnum step)  processing,required TResult Function( ActionStepEnum step)  step,required TResult Function( User user)  authenticated,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( ActionStepEnum step)?  processing,TResult? Function( ActionStepEnum step)?  step,TResult? Function( User user)?  authenticated,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( ActionStepEnum step)?  processing,TResult Function( ActionStepEnum step)?  step,TResult Function( User user)?  authenticated,required TResult orElse(),}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( AuthActionsProcessing value)  processing,required TResult Function( AuthActionsStep value)  step,required TResult Function( Authenticated value)  authenticated,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( AuthActionsProcessing value)?  processing,TResult? Function( AuthActionsStep value)?  step,TResult? Function( Authenticated value)?  authenticated,}) => throw _privateConstructorUsedError;
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( AuthActionsProcessing value)?  processing,TResult Function( AuthActionsStep value)?  step,TResult Function( Authenticated value)?  authenticated,required TResult orElse(),}) => throw _privateConstructorUsedError;
-
-
-}
-
-/// @nodoc
-abstract class $AuthActionsStateCopyWith<$Res>  {
-  factory $AuthActionsStateCopyWith(AuthActionsState value, $Res Function(AuthActionsState) then) = _$AuthActionsStateCopyWithImpl<$Res, AuthActionsState>;
-
-
-
-}
-
-/// @nodoc
-class _$AuthActionsStateCopyWithImpl<$Res,$Val extends AuthActionsState> implements $AuthActionsStateCopyWith<$Res> {
-  _$AuthActionsStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-
-
-}
-
-
-/// @nodoc
-abstract class _$$AuthActionsProcessingImplCopyWith<$Res>  {
-  factory _$$AuthActionsProcessingImplCopyWith(_$AuthActionsProcessingImpl value, $Res Function(_$AuthActionsProcessingImpl) then) = __$$AuthActionsProcessingImplCopyWithImpl<$Res>;
-@useResult
-$Res call({
- ActionStepEnum step
-});
-
-
-
-}
-
-/// @nodoc
-class __$$AuthActionsProcessingImplCopyWithImpl<$Res> extends _$AuthActionsStateCopyWithImpl<$Res, _$AuthActionsProcessingImpl> implements _$$AuthActionsProcessingImplCopyWith<$Res> {
-  __$$AuthActionsProcessingImplCopyWithImpl(_$AuthActionsProcessingImpl _value, $Res Function(_$AuthActionsProcessingImpl) _then)
-      : super(_value, _then);
-
-
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? step = null,}) {
-  return _then(_$AuthActionsProcessingImpl(
-null == step ? _value.step : step // ignore: cast_nullable_to_non_nullable
-as ActionStepEnum,
-  ));
-}
-
-
-}
-
-/// @nodoc
-
-
-class _$AuthActionsProcessingImpl extends AuthActionsProcessing  {
-  const _$AuthActionsProcessingImpl(this.step): super._();
-
-  
-
-@override final  ActionStepEnum step;
-
-@override
-String toString() {
-  return 'AuthActionsState.processing(step: $step)';
-}
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _$AuthActionsProcessingImpl&&(identical(other.step, step) || other.step == step));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,step);
-
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-@pragma('vm:prefer-inline')
-_$$AuthActionsProcessingImplCopyWith<_$AuthActionsProcessingImpl> get copyWith => __$$AuthActionsProcessingImplCopyWithImpl<_$AuthActionsProcessingImpl>(this, _$identity);
-
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( ActionStepEnum step)  processing,required TResult Function( ActionStepEnum step)  step,required TResult Function( User user)  authenticated,}) {
-  return processing(this.step);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( ActionStepEnum step)?  processing,TResult? Function( ActionStepEnum step)?  step,TResult? Function( User user)?  authenticated,}) {
-  return processing?.call(this.step);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( ActionStepEnum step)?  processing,TResult Function( ActionStepEnum step)?  step,TResult Function( User user)?  authenticated,required TResult orElse(),}) {
-  if (processing != null) {
-    return processing(this.step);
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is AuthActionsState);
   }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( AuthActionsProcessing value)  processing,required TResult Function( AuthActionsStep value)  step,required TResult Function( Authenticated value)  authenticated,}) {
-  return processing(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( AuthActionsProcessing value)?  processing,TResult? Function( AuthActionsStep value)?  step,TResult? Function( Authenticated value)?  authenticated,}) {
-  return processing?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( AuthActionsProcessing value)?  processing,TResult Function( AuthActionsStep value)?  step,TResult Function( Authenticated value)?  authenticated,required TResult orElse(),}) {
-  if (processing != null) {
-    return processing(this);
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  String toString() {
+    return 'AuthActionsState()';
   }
-  return orElse();
-}
-
-}
-
-
-abstract class AuthActionsProcessing extends AuthActionsState {
-  const factory AuthActionsProcessing(final  ActionStepEnum step) = _$AuthActionsProcessingImpl;
-  const AuthActionsProcessing._(): super._();
-
-  
-
- ActionStepEnum get step;
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-_$$AuthActionsProcessingImplCopyWith<_$AuthActionsProcessingImpl> get copyWith => throw _privateConstructorUsedError;
-
 }
 
 /// @nodoc
-abstract class _$$AuthActionsStepImplCopyWith<$Res>  {
-  factory _$$AuthActionsStepImplCopyWith(_$AuthActionsStepImpl value, $Res Function(_$AuthActionsStepImpl) then) = __$$AuthActionsStepImplCopyWithImpl<$Res>;
-@useResult
-$Res call({
- ActionStepEnum step
-});
-
-
-
+class $AuthActionsStateCopyWith<$Res> {
+  $AuthActionsStateCopyWith(
+      AuthActionsState _, $Res Function(AuthActionsState) __);
 }
 
-/// @nodoc
-class __$$AuthActionsStepImplCopyWithImpl<$Res> extends _$AuthActionsStateCopyWithImpl<$Res, _$AuthActionsStepImpl> implements _$$AuthActionsStepImplCopyWith<$Res> {
-  __$$AuthActionsStepImplCopyWithImpl(_$AuthActionsStepImpl _value, $Res Function(_$AuthActionsStepImpl) _then)
-      : super(_value, _then);
+/// Adds pattern-matching-related methods to [AuthActionsState].
+extension AuthActionsStatePatterns on AuthActionsState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? step = null,}) {
-  return _then(_$AuthActionsStepImpl(
-null == step ? _value.step : step // ignore: cast_nullable_to_non_nullable
-as ActionStepEnum,
-  ));
-}
-
-
-}
-
-/// @nodoc
-
-
-class _$AuthActionsStepImpl extends AuthActionsStep  {
-  const _$AuthActionsStepImpl(this.step): super._();
-
-  
-
-@override final  ActionStepEnum step;
-
-@override
-String toString() {
-  return 'AuthActionsState.step(step: $step)';
-}
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _$AuthActionsStepImpl&&(identical(other.step, step) || other.step == step));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,step);
-
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-@pragma('vm:prefer-inline')
-_$$AuthActionsStepImplCopyWith<_$AuthActionsStepImpl> get copyWith => __$$AuthActionsStepImplCopyWithImpl<_$AuthActionsStepImpl>(this, _$identity);
-
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( ActionStepEnum step)  processing,required TResult Function( ActionStepEnum step)  step,required TResult Function( User user)  authenticated,}) {
-  return step(this.step);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( ActionStepEnum step)?  processing,TResult? Function( ActionStepEnum step)?  step,TResult? Function( User user)?  authenticated,}) {
-  return step?.call(this.step);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( ActionStepEnum step)?  processing,TResult Function( ActionStepEnum step)?  step,TResult Function( User user)?  authenticated,required TResult orElse(),}) {
-  if (step != null) {
-    return step(this.step);
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AuthActionsProcessing value)? processing,
+    TResult Function(AuthActionsStep value)? step,
+    TResult Function(Authenticated value)? authenticated,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case AuthActionsProcessing() when processing != null:
+        return processing(_that);
+      case AuthActionsStep() when step != null:
+        return step(_that);
+      case Authenticated() when authenticated != null:
+        return authenticated(_that);
+      case _:
+        return orElse();
+    }
   }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( AuthActionsProcessing value)  processing,required TResult Function( AuthActionsStep value)  step,required TResult Function( Authenticated value)  authenticated,}) {
-  return step(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( AuthActionsProcessing value)?  processing,TResult? Function( AuthActionsStep value)?  step,TResult? Function( Authenticated value)?  authenticated,}) {
-  return step?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( AuthActionsProcessing value)?  processing,TResult Function( AuthActionsStep value)?  step,TResult Function( Authenticated value)?  authenticated,required TResult orElse(),}) {
-  if (step != null) {
-    return step(this);
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AuthActionsProcessing value) processing,
+    required TResult Function(AuthActionsStep value) step,
+    required TResult Function(Authenticated value) authenticated,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case AuthActionsProcessing():
+        return processing(_that);
+      case AuthActionsStep():
+        return step(_that);
+      case Authenticated():
+        return authenticated(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
   }
-  return orElse();
-}
 
-}
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
 
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AuthActionsProcessing value)? processing,
+    TResult? Function(AuthActionsStep value)? step,
+    TResult? Function(Authenticated value)? authenticated,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case AuthActionsProcessing() when processing != null:
+        return processing(_that);
+      case AuthActionsStep() when step != null:
+        return step(_that);
+      case Authenticated() when authenticated != null:
+        return authenticated(_that);
+      case _:
+        return null;
+    }
+  }
 
-abstract class AuthActionsStep extends AuthActionsState {
-  const factory AuthActionsStep(final  ActionStepEnum step) = _$AuthActionsStepImpl;
-  const AuthActionsStep._(): super._();
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
 
-  
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(ActionStepEnum step)? processing,
+    TResult Function(ActionStepEnum step)? step,
+    TResult Function(User user)? authenticated,
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case AuthActionsProcessing() when processing != null:
+        return processing(_that.step);
+      case AuthActionsStep() when step != null:
+        return step(_that.step);
+      case Authenticated() when authenticated != null:
+        return authenticated(_that.user);
+      case _:
+        return orElse();
+    }
+  }
 
- ActionStepEnum get step;
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-_$$AuthActionsStepImplCopyWith<_$AuthActionsStepImpl> get copyWith => throw _privateConstructorUsedError;
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
 
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(ActionStepEnum step) processing,
+    required TResult Function(ActionStepEnum step) step,
+    required TResult Function(User user) authenticated,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case AuthActionsProcessing():
+        return processing(_that.step);
+      case AuthActionsStep():
+        return step(_that.step);
+      case Authenticated():
+        return authenticated(_that.user);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(ActionStepEnum step)? processing,
+    TResult? Function(ActionStepEnum step)? step,
+    TResult? Function(User user)? authenticated,
+  }) {
+    final _that = this;
+    switch (_that) {
+      case AuthActionsProcessing() when processing != null:
+        return processing(_that.step);
+      case AuthActionsStep() when step != null:
+        return step(_that.step);
+      case Authenticated() when authenticated != null:
+        return authenticated(_that.user);
+      case _:
+        return null;
+    }
+  }
 }
 
 /// @nodoc
-abstract class _$$AuthenticatedImplCopyWith<$Res>  {
-  factory _$$AuthenticatedImplCopyWith(_$AuthenticatedImpl value, $Res Function(_$AuthenticatedImpl) then) = __$$AuthenticatedImplCopyWithImpl<$Res>;
-@useResult
-$Res call({
- User user
-});
 
+class AuthActionsProcessing extends AuthActionsState {
+  const AuthActionsProcessing(this.step) : super._();
 
-$UserCopyWith<$Res> get user;
+  final ActionStepEnum step;
+
+  /// Create a copy of AuthActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $AuthActionsProcessingCopyWith<AuthActionsProcessing> get copyWith =>
+      _$AuthActionsProcessingCopyWithImpl<AuthActionsProcessing>(
+          this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is AuthActionsProcessing &&
+            (identical(other.step, step) || other.step == step));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, step);
+
+  @override
+  String toString() {
+    return 'AuthActionsState.processing(step: $step)';
+  }
 }
 
 /// @nodoc
-class __$$AuthenticatedImplCopyWithImpl<$Res> extends _$AuthActionsStateCopyWithImpl<$Res, _$AuthenticatedImpl> implements _$$AuthenticatedImplCopyWith<$Res> {
-  __$$AuthenticatedImplCopyWithImpl(_$AuthenticatedImpl _value, $Res Function(_$AuthenticatedImpl) _then)
-      : super(_value, _then);
-
-
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? user = null,}) {
-  return _then(_$AuthenticatedImpl(
-null == user ? _value.user : user // ignore: cast_nullable_to_non_nullable
-as User,
-  ));
+abstract mixin class $AuthActionsProcessingCopyWith<$Res>
+    implements $AuthActionsStateCopyWith<$Res> {
+  factory $AuthActionsProcessingCopyWith(AuthActionsProcessing value,
+          $Res Function(AuthActionsProcessing) _then) =
+      _$AuthActionsProcessingCopyWithImpl;
+  @useResult
+  $Res call({ActionStepEnum step});
 }
 
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$UserCopyWith<$Res> get user {
-  
-  return $UserCopyWith<$Res>(_value.user, (value) {
-    return _then(_value.copyWith(user: value) );
-  });
-}
+/// @nodoc
+class _$AuthActionsProcessingCopyWithImpl<$Res>
+    implements $AuthActionsProcessingCopyWith<$Res> {
+  _$AuthActionsProcessingCopyWithImpl(this._self, this._then);
+
+  final AuthActionsProcessing _self;
+  final $Res Function(AuthActionsProcessing) _then;
+
+  /// Create a copy of AuthActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? step = null,
+  }) {
+    return _then(AuthActionsProcessing(
+      null == step
+          ? _self.step
+          : step // ignore: cast_nullable_to_non_nullable
+              as ActionStepEnum,
+    ));
+  }
 }
 
 /// @nodoc
 
+class AuthActionsStep extends AuthActionsState {
+  const AuthActionsStep(this.step) : super._();
 
-class _$AuthenticatedImpl extends Authenticated  {
-  const _$AuthenticatedImpl(this.user): super._();
+  final ActionStepEnum step;
 
-  
+  /// Create a copy of AuthActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $AuthActionsStepCopyWith<AuthActionsStep> get copyWith =>
+      _$AuthActionsStepCopyWithImpl<AuthActionsStep>(this, _$identity);
 
-@override final  User user;
-
-@override
-String toString() {
-  return 'AuthActionsState.authenticated(user: $user)';
-}
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _$AuthenticatedImpl&&(identical(other.user, user) || other.user == user));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,user);
-
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-@pragma('vm:prefer-inline')
-_$$AuthenticatedImplCopyWith<_$AuthenticatedImpl> get copyWith => __$$AuthenticatedImplCopyWithImpl<_$AuthenticatedImpl>(this, _$identity);
-
-@override
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( ActionStepEnum step)  processing,required TResult Function( ActionStepEnum step)  step,required TResult Function( User user)  authenticated,}) {
-  return authenticated(user);
-}
-@override
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( ActionStepEnum step)?  processing,TResult? Function( ActionStepEnum step)?  step,TResult? Function( User user)?  authenticated,}) {
-  return authenticated?.call(user);
-}
-@override
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( ActionStepEnum step)?  processing,TResult Function( ActionStepEnum step)?  step,TResult Function( User user)?  authenticated,required TResult orElse(),}) {
-  if (authenticated != null) {
-    return authenticated(user);
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is AuthActionsStep &&
+            (identical(other.step, step) || other.step == step));
   }
-  return orElse();
-}
-@override
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( AuthActionsProcessing value)  processing,required TResult Function( AuthActionsStep value)  step,required TResult Function( Authenticated value)  authenticated,}) {
-  return authenticated(this);
-}
-@override
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( AuthActionsProcessing value)?  processing,TResult? Function( AuthActionsStep value)?  step,TResult? Function( Authenticated value)?  authenticated,}) {
-  return authenticated?.call(this);
-}
-@override
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( AuthActionsProcessing value)?  processing,TResult Function( AuthActionsStep value)?  step,TResult Function( Authenticated value)?  authenticated,required TResult orElse(),}) {
-  if (authenticated != null) {
-    return authenticated(this);
+
+  @override
+  int get hashCode => Object.hash(runtimeType, step);
+
+  @override
+  String toString() {
+    return 'AuthActionsState.step(step: $step)';
   }
-  return orElse();
 }
 
+/// @nodoc
+abstract mixin class $AuthActionsStepCopyWith<$Res>
+    implements $AuthActionsStateCopyWith<$Res> {
+  factory $AuthActionsStepCopyWith(
+          AuthActionsStep value, $Res Function(AuthActionsStep) _then) =
+      _$AuthActionsStepCopyWithImpl;
+  @useResult
+  $Res call({ActionStepEnum step});
 }
 
+/// @nodoc
+class _$AuthActionsStepCopyWithImpl<$Res>
+    implements $AuthActionsStepCopyWith<$Res> {
+  _$AuthActionsStepCopyWithImpl(this._self, this._then);
 
-abstract class Authenticated extends AuthActionsState {
-  const factory Authenticated(final  User user) = _$AuthenticatedImpl;
-  const Authenticated._(): super._();
+  final AuthActionsStep _self;
+  final $Res Function(AuthActionsStep) _then;
 
-  
-
- User get user;
-/// Create a copy of AuthActionsState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-_$$AuthenticatedImplCopyWith<_$AuthenticatedImpl> get copyWith => throw _privateConstructorUsedError;
-
+  /// Create a copy of AuthActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? step = null,
+  }) {
+    return _then(AuthActionsStep(
+      null == step
+          ? _self.step
+          : step // ignore: cast_nullable_to_non_nullable
+              as ActionStepEnum,
+    ));
+  }
 }
+
+/// @nodoc
+
+class Authenticated extends AuthActionsState {
+  const Authenticated(this.user) : super._();
+
+  final User user;
+
+  /// Create a copy of AuthActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $AuthenticatedCopyWith<Authenticated> get copyWith =>
+      _$AuthenticatedCopyWithImpl<Authenticated>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Authenticated &&
+            (identical(other.user, user) || other.user == user));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, user);
+
+  @override
+  String toString() {
+    return 'AuthActionsState.authenticated(user: $user)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $AuthenticatedCopyWith<$Res>
+    implements $AuthActionsStateCopyWith<$Res> {
+  factory $AuthenticatedCopyWith(
+          Authenticated value, $Res Function(Authenticated) _then) =
+      _$AuthenticatedCopyWithImpl;
+  @useResult
+  $Res call({User user});
+
+  $UserCopyWith<$Res> get user;
+}
+
+/// @nodoc
+class _$AuthenticatedCopyWithImpl<$Res>
+    implements $AuthenticatedCopyWith<$Res> {
+  _$AuthenticatedCopyWithImpl(this._self, this._then);
+
+  final Authenticated _self;
+  final $Res Function(Authenticated) _then;
+
+  /// Create a copy of AuthActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? user = null,
+  }) {
+    return _then(Authenticated(
+      null == user
+          ? _self.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
+    ));
+  }
+
+  /// Create a copy of AuthActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $UserCopyWith<$Res> get user {
+    return $UserCopyWith<$Res>(_self.user, (value) {
+      return _then(_self.copyWith(user: value));
+    });
+  }
+}
+
+// dart format on

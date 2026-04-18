@@ -1,5 +1,5 @@
 import 'package:fpdart/fpdart.dart';
-import 'package:mobile_driver/core/errors/failures.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Interface for internationalization repository
 abstract class II18nRepository {

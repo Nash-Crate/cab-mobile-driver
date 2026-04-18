@@ -1,8 +1,9 @@
-// ignore_for_file: public_member_api_docs
 part of 'trip_history_details_cubit.dart';
 
+/// TripHistoryDetailsState defines the state of the trip history details feature in the application.
 @freezed
-class TripHistoryDetailsState with _$TripHistoryDetailsState {
+abstract class TripHistoryDetailsState with _$TripHistoryDetailsState {
+  /// Factory constructor for TripHistoryDetailsState
   const factory TripHistoryDetailsState({
     required Trip trip,
     TripDetails? details,
@@ -10,5 +11,6 @@ class TripHistoryDetailsState with _$TripHistoryDetailsState {
     String? error,
   }) = _TripHistoryDetailsState;
 
+  /// Initial state of the TripHistoryDetailsState
   factory TripHistoryDetailsState.initial(Trip trip) => TripHistoryDetailsState(trip: trip);
 }

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -12,8 +14,10 @@ part 'i18n_state.dart';
 /// Internationalization state
 @singleton
 class I18nCubit extends Cubit<I18nState> {
-  // ignore: public_member_api_docs
-  I18nCubit(this._getCachedLanguageCode, this._cacheLanguageCode) : super(I18nState.initial());
+  /// constructor
+  I18nCubit(this._getCachedLanguageCode, this._cacheLanguageCode) : super(I18nState.initial()) {
+    unawaited(init());
+  }
 
   final GetCachedLanguageCode _getCachedLanguageCode;
   final CacheLanguageCode _cacheLanguageCode;
@@ -26,7 +30,7 @@ class I18nCubit extends Cubit<I18nState> {
       final appLocale = _getAppLocaleFromLanguageCode(result.asR!);
 
       // set translation file
-      LocaleSettings.setLocale(appLocale);
+      await LocaleSettings.setLocale(appLocale);
       return emit(state.copyWith(appLocale: appLocale));
     }
   }
@@ -43,7 +47,7 @@ class I18nCubit extends Cubit<I18nState> {
 
     // set translation file
     final locale = _getAppLocaleFromLanguageCode(languageCode);
-    LocaleSettings.setLocale(locale);
+    await LocaleSettings.setLocale(locale);
     return emit(state.copyWith(appLocale: locale, processing: false));
   }
 

@@ -4,8 +4,8 @@ part 'pay_method.freezed.dart';
 
 /// Pay method
 @freezed
-class PayMethod with _$PayMethod {
-  // ignore: public_member_api_docs
+abstract class PayMethod with _$PayMethod {
+  /// constructor
   const factory PayMethod({
     required String id,
     required String name,

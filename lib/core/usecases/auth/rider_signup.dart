@@ -2,13 +2,14 @@ import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile_driver/core/core.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'rider_signup.freezed.dart';
 
 /// Usecase for login a rider to the app
 @singleton
 class SignUpRider implements Usecase<Unit, RiderSignUpParams> {
-  // ignore: public_member_api_docs
+  /// Constructor
   const SignUpRider(this._authRepository);
 
   final IAuthRepository _authRepository;
@@ -21,8 +22,8 @@ class SignUpRider implements Usecase<Unit, RiderSignUpParams> {
 
 /// Parameters to signup a rider
 @freezed
-class RiderSignUpParams with _$RiderSignUpParams {
-  // ignore: public_member_api_docs
+abstract class RiderSignUpParams with _$RiderSignUpParams {
+  /// constructor
   const factory RiderSignUpParams({
     required FirstName firstName,
     required LastName lastName,

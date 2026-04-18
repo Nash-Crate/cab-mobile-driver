@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Floating action button for home page
 class HomeFloatingActions extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const HomeFloatingActions({super.key});
 
   @override
@@ -38,13 +38,13 @@ class HomeFloatingActions extends StatelessWidget {
                 duration: crossFadeDuration,
                 firstChild: HomeExtendedFab(
                   fillColor: context.colorScheme.secondary,
-                  iconPath: Assets.homePickupInverted,
+                  iconPath: Assets.home.pickupInverted.path,
                   label: t.home.actions.begin,
                   onPressed: () => context.read<HomeMapCubit>().activate(HomeMapAction.pickUp),
                 ),
                 secondChild: HomeExtendedFab(
                   fillColor: context.colorScheme.primary,
-                  iconPath: Assets.homeDropOffInverted,
+                  iconPath: Assets.home.dropOffInverted.path,
                   label: t.home.actions.setDropOff,
                   onPressed: () => context.read<HomeMapCubit>().activate(HomeMapAction.dropOff),
                 ),

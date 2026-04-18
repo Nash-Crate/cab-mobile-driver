@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:mobile_driver/injection.config.dart';
 
 /// getIt instance
-final getIt = GetIt.instance;
+final GetIt getIt = GetIt.instance;
 
 /// Injectable initialization
 @injectableInit

@@ -13,7 +13,7 @@ const supportEmail = 'support@mauricab.com';
 
 /// Contact us header
 class ContactUsHeader extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const ContactUsHeader({super.key});
 
   @override
@@ -40,7 +40,7 @@ class ContactUsHeader extends StatelessWidget {
                 child: ContactUsSupportCard(
                   title: t.contactUs.support.phone,
                   data: supportPhoneNumber,
-                  svgIcon: AppSvgImage(Assets.contactUsCalling, width: 80.w),
+                  svgIcon: AppSvgImage(Assets.contactUs.calling.path, width: 80.w),
                   onPressed: () async {
                     const url = 'tel:$supportPhoneNumber';
                     if (!await launchUrl(Uri.parse(url))) {
@@ -57,7 +57,7 @@ class ContactUsHeader extends StatelessWidget {
                 child: ContactUsSupportCard(
                   title: t.contactUs.support.email,
                   data: supportEmail,
-                  svgIcon: AppSvgImage(Assets.contactUsMail, width: 80.w),
+                  svgIcon: AppSvgImage(Assets.contactUs.mail.path, width: 80.w),
                   onPressed: () async {
                     const url = 'mailto:$supportEmail';
                     if (!await launchUrl(Uri.parse(url))) {

@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
-import 'package:mobile_driver/core/errors/errors.dart';
 import 'package:mobile_driver/infrastructure/datasources/errors/errors.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Network info interface
 abstract class INetworkInfo {
@@ -15,7 +15,7 @@ abstract class INetworkInfo {
 /// Network info implementation
 @Singleton(as: INetworkInfo)
 class NetworkInfoImpl implements INetworkInfo {
-  // ignore: public_member_api_docs
+  /// constructor
   const NetworkInfoImpl(this._connectivity);
   final InternetConnection _connectivity;
 

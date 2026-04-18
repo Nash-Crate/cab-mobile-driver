@@ -1,13 +1,12 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/errors/failures.dart';
 import 'package:mobile_driver/core/repositories/repositories.dart';
-import 'package:mobile_driver/core/usecases/usecase.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Get the cached language code from the device
 @singleton
 class GetCachedLanguageCode implements UsecaseNoParams<String?> {
-  // ignore: public_member_api_docs
+  /// Constructor
   const GetCachedLanguageCode(this._repository);
 
   final II18nRepository _repository;

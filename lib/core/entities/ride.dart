@@ -1,13 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mobile_driver/core/entities/entities.dart';
-import 'package:mobile_driver/core/enums/enums.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'ride.freezed.dart';
 
 /// Ride entity
 @freezed
-class Ride with _$Ride {
-  // ignore: public_member_api_docs
+abstract class Ride with _$Ride {
+  /// Constructor
   const factory Ride({
     required String id,
     required TripTypeEnum rideType,

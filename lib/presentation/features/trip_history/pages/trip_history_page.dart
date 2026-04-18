@@ -8,7 +8,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// Trip history page
 class TripHistoryPage extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripHistoryPage({super.key});
 
   /// router path
@@ -17,7 +17,7 @@ class TripHistoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<TripHistoryCubit>()..fetch(),
+      create: (context) => getIt<TripHistoryCubit>(),
       child: Builder(
         builder: (context) {
           return AppScaffold(

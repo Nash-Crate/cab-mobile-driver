@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,183 +9,452 @@ part of 'home_cubit.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-
-final _privateConstructorUsedError = UnsupportedError('It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$HomeState {
+  LatLong? get pickUpLocation;
+  LatLong? get dropOffLocation;
+  RideModeEnum?
+      get rideMode; // TODO(fromApi): both rideType and PayMethod will be retrieved from the server
+  String? get rideType;
+  String? get payMethod;
 
- LatLong? get pickUpLocation => throw _privateConstructorUsedError; LatLong? get dropOffLocation => throw _privateConstructorUsedError; RideModeEnum? get rideMode => throw _privateConstructorUsedError;// TODO(fromApi): both rideType and PayMethod will be retrieved from the server
- String? get rideType => throw _privateConstructorUsedError; String? get payMethod => throw _privateConstructorUsedError;
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $HomeStateCopyWith<HomeState> get copyWith =>
+      _$HomeStateCopyWithImpl<HomeState>(this as HomeState, _$identity);
 
-
-
-
-
-
-
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-$HomeStateCopyWith<HomeState> get copyWith => throw _privateConstructorUsedError;
-
-}
-
-/// @nodoc
-abstract class $HomeStateCopyWith<$Res>  {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) = _$HomeStateCopyWithImpl<$Res, HomeState>;
-@useResult
-$Res call({
- LatLong? pickUpLocation, LatLong? dropOffLocation, RideModeEnum? rideMode, String? rideType, String? payMethod
-});
-
-
-$LatLongCopyWith<$Res>? get pickUpLocation;$LatLongCopyWith<$Res>? get dropOffLocation;
-}
-
-/// @nodoc
-class _$HomeStateCopyWithImpl<$Res,$Val extends HomeState> implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? pickUpLocation = freezed,Object? dropOffLocation = freezed,Object? rideMode = freezed,Object? rideType = freezed,Object? payMethod = freezed,}) {
-  return _then(_value.copyWith(
-pickUpLocation: freezed == pickUpLocation ? _value.pickUpLocation : pickUpLocation // ignore: cast_nullable_to_non_nullable
-as LatLong?,dropOffLocation: freezed == dropOffLocation ? _value.dropOffLocation : dropOffLocation // ignore: cast_nullable_to_non_nullable
-as LatLong?,rideMode: freezed == rideMode ? _value.rideMode : rideMode // ignore: cast_nullable_to_non_nullable
-as RideModeEnum?,rideType: freezed == rideType ? _value.rideType : rideType // ignore: cast_nullable_to_non_nullable
-as String?,payMethod: freezed == payMethod ? _value.payMethod : payMethod // ignore: cast_nullable_to_non_nullable
-as String?,
-  )as $Val);
-}
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$LatLongCopyWith<$Res>? get pickUpLocation {
-    if (_value.pickUpLocation == null) {
-    return null;
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is HomeState &&
+            (identical(other.pickUpLocation, pickUpLocation) ||
+                other.pickUpLocation == pickUpLocation) &&
+            (identical(other.dropOffLocation, dropOffLocation) ||
+                other.dropOffLocation == dropOffLocation) &&
+            (identical(other.rideMode, rideMode) ||
+                other.rideMode == rideMode) &&
+            (identical(other.rideType, rideType) ||
+                other.rideType == rideType) &&
+            (identical(other.payMethod, payMethod) ||
+                other.payMethod == payMethod));
   }
 
-  return $LatLongCopyWith<$Res>(_value.pickUpLocation!, (value) {
-    return _then(_value.copyWith(pickUpLocation: value) as $Val);
-  });
-}/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@override
-@pragma('vm:prefer-inline')
-$LatLongCopyWith<$Res>? get dropOffLocation {
-    if (_value.dropOffLocation == null) {
-    return null;
+  @override
+  int get hashCode => Object.hash(runtimeType, pickUpLocation, dropOffLocation,
+      rideMode, rideType, payMethod);
+
+  @override
+  String toString() {
+    return 'HomeState(pickUpLocation: $pickUpLocation, dropOffLocation: $dropOffLocation, rideMode: $rideMode, rideType: $rideType, payMethod: $payMethod)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $HomeStateCopyWith<$Res> {
+  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) _then) =
+      _$HomeStateCopyWithImpl;
+  @useResult
+  $Res call(
+      {LatLong? pickUpLocation,
+      LatLong? dropOffLocation,
+      RideModeEnum? rideMode,
+      String? rideType,
+      String? payMethod});
+
+  $LatLongCopyWith<$Res>? get pickUpLocation;
+  $LatLongCopyWith<$Res>? get dropOffLocation;
+}
+
+/// @nodoc
+class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
+  _$HomeStateCopyWithImpl(this._self, this._then);
+
+  final HomeState _self;
+  final $Res Function(HomeState) _then;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pickUpLocation = freezed,
+    Object? dropOffLocation = freezed,
+    Object? rideMode = freezed,
+    Object? rideType = freezed,
+    Object? payMethod = freezed,
+  }) {
+    return _then(_self.copyWith(
+      pickUpLocation: freezed == pickUpLocation
+          ? _self.pickUpLocation
+          : pickUpLocation // ignore: cast_nullable_to_non_nullable
+              as LatLong?,
+      dropOffLocation: freezed == dropOffLocation
+          ? _self.dropOffLocation
+          : dropOffLocation // ignore: cast_nullable_to_non_nullable
+              as LatLong?,
+      rideMode: freezed == rideMode
+          ? _self.rideMode
+          : rideMode // ignore: cast_nullable_to_non_nullable
+              as RideModeEnum?,
+      rideType: freezed == rideType
+          ? _self.rideType
+          : rideType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      payMethod: freezed == payMethod
+          ? _self.payMethod
+          : payMethod // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 
-  return $LatLongCopyWith<$Res>(_value.dropOffLocation!, (value) {
-    return _then(_value.copyWith(dropOffLocation: value) as $Val);
-  });
-}
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LatLongCopyWith<$Res>? get pickUpLocation {
+    if (_self.pickUpLocation == null) {
+      return null;
+    }
+
+    return $LatLongCopyWith<$Res>(_self.pickUpLocation!, (value) {
+      return _then(_self.copyWith(pickUpLocation: value));
+    });
+  }
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LatLongCopyWith<$Res>? get dropOffLocation {
+    if (_self.dropOffLocation == null) {
+      return null;
+    }
+
+    return $LatLongCopyWith<$Res>(_self.dropOffLocation!, (value) {
+      return _then(_self.copyWith(dropOffLocation: value));
+    });
+  }
 }
 
+/// Adds pattern-matching-related methods to [HomeState].
+extension HomeStatePatterns on HomeState {
+  /// A variant of `map` that fallback to returning `orElse`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_HomeState value)? $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _HomeState() when $default != null:
+        return $default(_that);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// Callbacks receives the raw object, upcasted.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case final Subclass2 value:
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_HomeState value) $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _HomeState():
+        return $default(_that);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `map` that fallback to returning `null`.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case final Subclass value:
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_HomeState value)? $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _HomeState() when $default != null:
+        return $default(_that);
+      case _:
+        return null;
+    }
+  }
+
+  /// A variant of `when` that fallback to an `orElse` callback.
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return orElse();
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(LatLong? pickUpLocation, LatLong? dropOffLocation,
+            RideModeEnum? rideMode, String? rideType, String? payMethod)?
+        $default, {
+    required TResult orElse(),
+  }) {
+    final _that = this;
+    switch (_that) {
+      case _HomeState() when $default != null:
+        return $default(_that.pickUpLocation, _that.dropOffLocation,
+            _that.rideMode, _that.rideType, _that.payMethod);
+      case _:
+        return orElse();
+    }
+  }
+
+  /// A `switch`-like method, using callbacks.
+  ///
+  /// As opposed to `map`, this offers destructuring.
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case Subclass2(:final field2):
+  ///     return ...;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(LatLong? pickUpLocation, LatLong? dropOffLocation,
+            RideModeEnum? rideMode, String? rideType, String? payMethod)
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _HomeState():
+        return $default(_that.pickUpLocation, _that.dropOffLocation,
+            _that.rideMode, _that.rideType, _that.payMethod);
+      case _:
+        throw StateError('Unexpected subclass');
+    }
+  }
+
+  /// A variant of `when` that fallback to returning `null`
+  ///
+  /// It is equivalent to doing:
+  /// ```dart
+  /// switch (sealedClass) {
+  ///   case Subclass(:final field):
+  ///     return ...;
+  ///   case _:
+  ///     return null;
+  /// }
+  /// ```
+
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function(LatLong? pickUpLocation, LatLong? dropOffLocation,
+            RideModeEnum? rideMode, String? rideType, String? payMethod)?
+        $default,
+  ) {
+    final _that = this;
+    switch (_that) {
+      case _HomeState() when $default != null:
+        return $default(_that.pickUpLocation, _that.dropOffLocation,
+            _that.rideMode, _that.rideType, _that.payMethod);
+      case _:
+        return null;
+    }
+  }
+}
 
 /// @nodoc
-abstract class _$$HomeStateImplCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$$HomeStateImplCopyWith(_$HomeStateImpl value, $Res Function(_$HomeStateImpl) then) = __$$HomeStateImplCopyWithImpl<$Res>;
-@override @useResult
-$Res call({
- LatLong? pickUpLocation, LatLong? dropOffLocation, RideModeEnum? rideMode, String? rideType, String? payMethod
-});
 
+class _HomeState implements HomeState {
+  const _HomeState(
+      {this.pickUpLocation,
+      this.dropOffLocation,
+      this.rideMode,
+      this.rideType,
+      this.payMethod});
 
-@override $LatLongCopyWith<$Res>? get pickUpLocation;@override $LatLongCopyWith<$Res>? get dropOffLocation;
-}
-
-/// @nodoc
-class __$$HomeStateImplCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res, _$HomeStateImpl> implements _$$HomeStateImplCopyWith<$Res> {
-  __$$HomeStateImplCopyWithImpl(_$HomeStateImpl _value, $Res Function(_$HomeStateImpl) _then)
-      : super(_value, _then);
-
-
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? pickUpLocation = freezed,Object? dropOffLocation = freezed,Object? rideMode = freezed,Object? rideType = freezed,Object? payMethod = freezed,}) {
-  return _then(_$HomeStateImpl(
-pickUpLocation: freezed == pickUpLocation ? _value.pickUpLocation : pickUpLocation // ignore: cast_nullable_to_non_nullable
-as LatLong?,dropOffLocation: freezed == dropOffLocation ? _value.dropOffLocation : dropOffLocation // ignore: cast_nullable_to_non_nullable
-as LatLong?,rideMode: freezed == rideMode ? _value.rideMode : rideMode // ignore: cast_nullable_to_non_nullable
-as RideModeEnum?,rideType: freezed == rideType ? _value.rideType : rideType // ignore: cast_nullable_to_non_nullable
-as String?,payMethod: freezed == payMethod ? _value.payMethod : payMethod // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
-/// @nodoc
-
-
-class _$HomeStateImpl  implements _HomeState {
-  const _$HomeStateImpl({this.pickUpLocation, this.dropOffLocation, this.rideMode, this.rideType, this.payMethod});
-
-  
-
-@override final  LatLong? pickUpLocation;
-@override final  LatLong? dropOffLocation;
-@override final  RideModeEnum? rideMode;
+  @override
+  final LatLong? pickUpLocation;
+  @override
+  final LatLong? dropOffLocation;
+  @override
+  final RideModeEnum? rideMode;
 // TODO(fromApi): both rideType and PayMethod will be retrieved from the server
-@override final  String? rideType;
-@override final  String? payMethod;
+  @override
+  final String? rideType;
+  @override
+  final String? payMethod;
 
-@override
-String toString() {
-  return 'HomeState(pickUpLocation: $pickUpLocation, dropOffLocation: $dropOffLocation, rideMode: $rideMode, rideType: $rideType, payMethod: $payMethod)';
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$HomeStateCopyWith<_HomeState> get copyWith =>
+      __$HomeStateCopyWithImpl<_HomeState>(this, _$identity);
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _HomeState &&
+            (identical(other.pickUpLocation, pickUpLocation) ||
+                other.pickUpLocation == pickUpLocation) &&
+            (identical(other.dropOffLocation, dropOffLocation) ||
+                other.dropOffLocation == dropOffLocation) &&
+            (identical(other.rideMode, rideMode) ||
+                other.rideMode == rideMode) &&
+            (identical(other.rideType, rideType) ||
+                other.rideType == rideType) &&
+            (identical(other.payMethod, payMethod) ||
+                other.payMethod == payMethod));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pickUpLocation, dropOffLocation,
+      rideMode, rideType, payMethod);
+
+  @override
+  String toString() {
+    return 'HomeState(pickUpLocation: $pickUpLocation, dropOffLocation: $dropOffLocation, rideMode: $rideMode, rideType: $rideType, payMethod: $payMethod)';
+  }
 }
 
+/// @nodoc
+abstract mixin class _$HomeStateCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory _$HomeStateCopyWith(
+          _HomeState value, $Res Function(_HomeState) _then) =
+      __$HomeStateCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {LatLong? pickUpLocation,
+      LatLong? dropOffLocation,
+      RideModeEnum? rideMode,
+      String? rideType,
+      String? payMethod});
 
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _$HomeStateImpl&&(identical(other.pickUpLocation, pickUpLocation) || other.pickUpLocation == pickUpLocation)&&(identical(other.dropOffLocation, dropOffLocation) || other.dropOffLocation == dropOffLocation)&&(identical(other.rideMode, rideMode) || other.rideMode == rideMode)&&(identical(other.rideType, rideType) || other.rideType == rideType)&&(identical(other.payMethod, payMethod) || other.payMethod == payMethod));
+  @override
+  $LatLongCopyWith<$Res>? get pickUpLocation;
+  @override
+  $LatLongCopyWith<$Res>? get dropOffLocation;
 }
 
+/// @nodoc
+class __$HomeStateCopyWithImpl<$Res> implements _$HomeStateCopyWith<$Res> {
+  __$HomeStateCopyWithImpl(this._self, this._then);
 
-@override
-int get hashCode => Object.hash(runtimeType,pickUpLocation,dropOffLocation,rideMode,rideType,payMethod);
+  final _HomeState _self;
+  final $Res Function(_HomeState) _then;
 
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@override
-@pragma('vm:prefer-inline')
-_$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith => __$$HomeStateImplCopyWithImpl<_$HomeStateImpl>(this, _$identity);
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? pickUpLocation = freezed,
+    Object? dropOffLocation = freezed,
+    Object? rideMode = freezed,
+    Object? rideType = freezed,
+    Object? payMethod = freezed,
+  }) {
+    return _then(_HomeState(
+      pickUpLocation: freezed == pickUpLocation
+          ? _self.pickUpLocation
+          : pickUpLocation // ignore: cast_nullable_to_non_nullable
+              as LatLong?,
+      dropOffLocation: freezed == dropOffLocation
+          ? _self.dropOffLocation
+          : dropOffLocation // ignore: cast_nullable_to_non_nullable
+              as LatLong?,
+      rideMode: freezed == rideMode
+          ? _self.rideMode
+          : rideMode // ignore: cast_nullable_to_non_nullable
+              as RideModeEnum?,
+      rideType: freezed == rideType
+          ? _self.rideType
+          : rideType // ignore: cast_nullable_to_non_nullable
+              as String?,
+      payMethod: freezed == payMethod
+          ? _self.payMethod
+          : payMethod // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LatLongCopyWith<$Res>? get pickUpLocation {
+    if (_self.pickUpLocation == null) {
+      return null;
+    }
 
+    return $LatLongCopyWith<$Res>(_self.pickUpLocation!, (value) {
+      return _then(_self.copyWith(pickUpLocation: value));
+    });
+  }
 
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $LatLongCopyWith<$Res>? get dropOffLocation {
+    if (_self.dropOffLocation == null) {
+      return null;
+    }
 
-
-
-
-
+    return $LatLongCopyWith<$Res>(_self.dropOffLocation!, (value) {
+      return _then(_self.copyWith(dropOffLocation: value));
+    });
+  }
 }
 
-
-abstract class _HomeState implements HomeState {
-  const factory _HomeState({final  LatLong? pickUpLocation, final  LatLong? dropOffLocation, final  RideModeEnum? rideMode, final  String? rideType, final  String? payMethod}) = _$HomeStateImpl;
-  
-
-  
-
-@override LatLong? get pickUpLocation;@override LatLong? get dropOffLocation;@override RideModeEnum? get rideMode;// TODO(fromApi): both rideType and PayMethod will be retrieved from the server
-@override String? get rideType;@override String? get payMethod;
-/// Create a copy of HomeState
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-_$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith => throw _privateConstructorUsedError;
-
-}
+// dart format on

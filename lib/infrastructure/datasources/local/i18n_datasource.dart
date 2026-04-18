@@ -1,8 +1,8 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/errors/failures.dart';
 import 'package:mobile_driver/core/repositories/repositories.dart';
 import 'package:mobile_driver/infrastructure/infrastructure.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// I18nRemoteDatasource interface
 abstract class I18nLocalDatasource extends II18nRepository {}
@@ -10,7 +10,7 @@ abstract class I18nLocalDatasource extends II18nRepository {}
 /// I18nRemoteDatasource implementation
 @Singleton(as: I18nLocalDatasource)
 class I18nLocalDatasourceImpl implements I18nLocalDatasource {
-  // ignore: public_member_api_docs
+  /// constructor
   const I18nLocalDatasourceImpl(this._cacheStorage);
 
   final ICacheStorage _cacheStorage;
@@ -20,7 +20,7 @@ class I18nLocalDatasourceImpl implements I18nLocalDatasource {
     try {
       await _cacheStorage.upsert<String>(key: CacheKeys.lastLocale.name, data: langCode);
       return const Right(unit);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }
@@ -30,7 +30,7 @@ class I18nLocalDatasourceImpl implements I18nLocalDatasource {
     try {
       final langCode = await _cacheStorage.read<String>(key: CacheKeys.lastLocale.name);
       return Right(langCode);
-    } catch (e) {
+    } on Exception catch (e) {
       return Left(InfraExceptions.exceptionToFailure(e));
     }
   }

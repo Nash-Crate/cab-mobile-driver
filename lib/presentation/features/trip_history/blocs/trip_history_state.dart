@@ -1,8 +1,9 @@
-// ignore_for_file: public_member_api_docs
 part of 'trip_history_cubit.dart';
 
+/// Enum for the different sorting options in the trip history
 @freezed
-class TripHistoryState with _$TripHistoryState {
+abstract class TripHistoryState with _$TripHistoryState {
+  /// Factory constructor for TripHistoryState
   const factory TripHistoryState({
     @Default([]) List<Trip> trips,
     @Default(0) int totalTrips,
@@ -14,5 +15,6 @@ class TripHistoryState with _$TripHistoryState {
     String? error,
   }) = _TripHistoryState;
 
+  /// Initial state of the TripHistoryState
   factory TripHistoryState.initial() => const TripHistoryState();
 }

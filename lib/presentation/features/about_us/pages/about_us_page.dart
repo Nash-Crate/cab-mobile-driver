@@ -7,7 +7,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// About us page
 class AboutUsPage extends StatefulWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const AboutUsPage({super.key});
 
   /// router path

@@ -4,7 +4,7 @@ part 'list_response.freezed.dart';
 
 /// Wrapper for responses with list of items and pagination data
 @freezed
-class ListResponse<T> with _$ListResponse<T> {
+abstract class ListResponse<T> with _$ListResponse<T> {
   /// List response
   const factory ListResponse({
     required List<T> items,

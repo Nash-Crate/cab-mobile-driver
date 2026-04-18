@@ -1,6 +1,6 @@
 import 'package:geolocator/geolocator.dart';
-import 'package:mobile_driver/core/errors/errors.dart';
 import 'package:mobile_driver/i18n/translations.g.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Determine the current position of the device.
 ///

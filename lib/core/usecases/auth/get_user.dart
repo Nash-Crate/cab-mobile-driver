@@ -1,11 +1,12 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile_driver/core/core.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 /// Get user for the active accessToken usecase
 @singleton
 class GetUser implements UsecaseNoParams<User> {
-// ignore: public_member_api_docs
+  /// Constructor
   const GetUser(this._authRepository);
 
   final IAuthRepository _authRepository;

@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile_driver/core/core.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'trip_history_details_cubit.freezed.dart';
 part 'trip_history_details_state.dart';
@@ -9,7 +10,7 @@ part 'trip_history_details_state.dart';
 /// Trip history details cubit
 @injectable
 class TripHistoryDetailsCubit extends Cubit<TripHistoryDetailsState> {
-  // ignore: public_member_api_docs
+  /// constructor
   TripHistoryDetailsCubit(@factoryParam Trip trip) : super(TripHistoryDetailsState.initial(trip));
 
   /// Fetch trip history details
@@ -69,5 +70,6 @@ final _details = TripDetails(
       imageUrl: 'https://www.toyota.co.nz/globalassets/car-images/corolla-zxzr-nm1-218-20.png',
     ),
     imageUrl: 'https://randomuser.me/api/portraits/thumb/men/99.jpg',
+    driverLocation: LatLong(latitude: 59.3467183, longitude: 18.0097756),
   ),
 );

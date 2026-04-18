@@ -6,7 +6,7 @@ import 'package:mobile_driver/presentation/constants/constants.dart';
 import 'package:mobile_driver/presentation/features/trip_history/trip_history.dart';
 import 'package:mobile_library/mobile_library.dart';
 
-final _style = GoogleFonts.poppins(
+final TextStyle _style = GoogleFonts.poppins(
   textStyle: TextStyle(
     color: Colors.black,
     fontSize: 42.sp,
@@ -16,7 +16,7 @@ final _style = GoogleFonts.poppins(
 
 /// Trip Details Routes data
 class TripDetailsRoutes extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const TripDetailsRoutes({super.key});
 
   @override
@@ -90,14 +90,14 @@ class TripDetailsRoutes extends StatelessWidget {
               Positioned(
                 top: 0,
                 left: 0,
-                child: AppSvgImage(Assets.tripHistoryPickUp, width: 72.w, height: 72.h),
+                child: AppSvgImage(Assets.tripHistory.pickUp.path, width: 72.w, height: 72.h),
               ),
               Positioned(
                 bottom: 0,
                 left: 0,
                 child: SizedBox(
                   width: 72.w,
-                  child: AppSvgImage(Assets.tripHistoryDropOff, width: 54.w, height: 77.h),
+                  child: AppSvgImage(Assets.tripHistory.dropOff.path, width: 54.w, height: 77.h),
                 ),
               ),
             ],

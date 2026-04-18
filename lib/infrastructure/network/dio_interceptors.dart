@@ -1,12 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/errors/errors.dart';
 import 'package:mobile_driver/infrastructure/infrastructure.dart';
 import 'package:mobile_driver/presentation/extensions/extensions.dart';
 import 'package:mobile_library/mobile_library.dart';
 
 /// will bypass accessToken check on these urls
-const noneAuthedRoute = [
+const List<String> noneAuthedRoute = [
   loginCheckOtpUrl,
   loginUserUrl,
   registerUserUrl,
@@ -16,7 +15,7 @@ const noneAuthedRoute = [
 /// Dio http client interceptor override
 @singleton
 class DioInterceptor extends Interceptor {
-  // ignore: public_member_api_docs
+  /// constructor
   const DioInterceptor(this._authLocalDatasource, this._authRemoteDatasource);
 
   final AuthLocalDatasource _authLocalDatasource;

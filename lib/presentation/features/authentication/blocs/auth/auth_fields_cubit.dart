@@ -1,8 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:mobile_driver/core/core.dart';
-import 'package:mobile_driver/core/value_objects/value_objects.dart';
+import 'package:mobile_library/mobile_library.dart';
 
 part 'auth_fields_cubit.freezed.dart';
 part 'auth_fields_state.dart';
@@ -10,7 +9,7 @@ part 'auth_fields_state.dart';
 /// Cubit for authentication related fields
 @injectable
 class AuthFieldsCubit extends Cubit<AuthFieldsState> {
-  // ignore: public_member_api_docs
+  /// constructor
   AuthFieldsCubit() : super(AuthFieldsState.initial());
 
   /// country calling code field

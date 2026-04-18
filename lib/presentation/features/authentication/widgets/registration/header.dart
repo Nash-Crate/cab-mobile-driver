@@ -5,7 +5,7 @@ import 'package:mobile_library/mobile_library.dart';
 
 /// header for registration contents
 class RegistrationHeader extends StatelessWidget {
-  // ignore: public_member_api_docs
+  /// constructor
   const RegistrationHeader({super.key});
 
   @override
